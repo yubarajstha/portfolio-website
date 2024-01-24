@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <!DOCTYPE html>
+<html lang="en"> -->
 <!-- <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,7 +47,7 @@
 <!-- 
 </body>
 </html> -->
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yubaraj Shrestha</title>
@@ -88,5 +88,58 @@
 <body>
 
     <h1><p>Currently working on this website.<br>Please check back later.</p></h1>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #75a9be; /* Initial background color (light sky blue) */
+      transition: background-color 2s ease-in-out; /* Smooth transition for background color changes */
+    }
+
+    #message {
+      font-size: 24px;
+      color: #0000FF; /* Blue color for the message */
+      opacity: 0; /* Initially hidden */
+      animation: fadeInOut 4s infinite; /* Animation for fading in and out */
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="message">Working on this site <br> please check back later!!!</div>
+
+  <script>
+    // JavaScript code to dynamically change background color
+    setInterval(function() {
+      document.body.style.backgroundColor = getRandomColor();
+    }, 5000); // Change background color every 5 seconds
+
+    function getRandomColor() {
+      const colors = ['#87CEEB', '#6495ED']; // Light and dark sky blue colors
+      const randomIndex = Math.floor(Math.random() * colors.length);
+      return colors[randomIndex];
+    }
+  </script>
+
 </body>
 </html>
