@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,23 +7,20 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #75a9be; /* Initial background color (light sky blue) */
-      transition: background-color 2s ease-in-out; /* Smooth transition for background color changes */
+      background-color: #75a9be;
+      transition: background-color 2s ease-in-out;
     }
 
     p {
-      font-size: 24px;
-      color: #0000FF; /* Blue color for the message */
-      opacity: 0; /* Initially hidden */
-      animation: fadeInOut 4s infinite; /* Animation for fading in and out */
-      align-items: center;
-      height: auto;
-      display: inline;
-      justify-content: center;
+      font-size: 4vw; /* Responsive font size using viewport units */
+      color: #0000FF;
+      opacity: 0;
+      animation: fadeInOut 4s infinite;
+      text-align: center; /* Center text */
     }
 
     @keyframes fadeInOut {
@@ -35,20 +31,25 @@
         opacity: 1;
       }
     }
+
+    @media screen and (max-width: 600px) {
+      p {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+      }
+    }
   </style>
 </head>
 <body>
 
-   <p>Working on this site, please check back later!!!</p>
+  <p>Working on this site, please check back later!!!</p>
 
   <script>
-    // JavaScript code to dynamically change background color
     setInterval(function() {
       document.body.style.backgroundColor = getRandomColor();
-    }, 5000); // Change background color every 5 seconds
+    }, 5000);
 
     function getRandomColor() {
-      const colors = ['#87CEEB', '#6495ED']; // Light and dark sky blue colors
+      const colors = ['#87CEEB', '#6495ED'];
       const randomIndex = Math.floor(Math.random() * colors.length);
       return colors[randomIndex];
     }
